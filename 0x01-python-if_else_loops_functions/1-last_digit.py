@@ -21,18 +21,21 @@ else:
 if number < 0 and last_digit == 0:
     print("Last digit of {} is {} and is 0".format(number, last_digit))
 # we also check if the pos_num is negative and the last digit is not 0
-elif pos_num < 0 and last_digit != 0:
+elif number < 0 and last_digit != 0:
     print("Last digit of {} is ".format(number) +
           "{} and is less than 6 and not 0".format(last_digit))
+# i check if the number itself is 0
+elif number == 0:
+    print("Last digit of {} is {} and is 0".format(number, last_digit))
 # if the last_digit is == 0
-elif pos_num > 0 and last_digit == 0:
+elif (number > 0) and (last_digit == 0):
     print("Last digit of {} is {} and is 0".format(number, last_digit))
 # then i check if the pos_num is positive and last digit is greater than 5
-elif (pos_num > 0) and (last_digit > 5):
+elif (number > 0) and (last_digit > 5):
     print("Last digit of {} is ".format(number) +
           "{} and is greater than 5".format(last_digit))
 
 # i check if the last digit is < 6 and not == 0
-elif (pos_num > 0) and (last_digit < 6) and (last_digit != 0):
+elif (number > 0) and (last_digit < 6) and (last_digit != 0):
     print("Last digit of {} is ".format(number) +
           "{} and is less than 6 and not 0".format(last_digit))
