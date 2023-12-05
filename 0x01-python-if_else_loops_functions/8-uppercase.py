@@ -11,4 +11,4 @@ def uppercase(str):
                 total_string += conv_upper
             else:
                 total_string += i
-        print(total_string)
+        print("{}".format(total_string))
