@@ -1,3 +1,25 @@
 #!/bin/bash
-python3 -m py_compile "$PYFILE"
-BASENAME=$(basename "$PYFILE" .p
+
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Get the filename without extension
+filename=$(basename -- "$PYFILE")
+filename_no_ext="${filename%.*}"
+
+# Compile the Python script into main.pyc
+echo "Compiling $PYFILE ..."
+python3 - <<EOF
+import py_compile
+py_compile.compile('$PYFILE', cfile='${filename_no_ext}.pyc')
+EOF
+
+# Check if the file exists after compilation
+if [ -f "${filename_no_ext}.pyc" ]; then
+    echo "Compilation successful. Output file: ${filename_no_ext}.pyc"
+else
+    echo "Compilation failed."
+fi
