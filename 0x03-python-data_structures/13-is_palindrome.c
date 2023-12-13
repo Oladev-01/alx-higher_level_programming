@@ -19,7 +19,7 @@ int is_palindrome(listint_t **head)
 		a++;
 		current = current->next;
 	}
-	check_1 = malloc(a * sizeof(int));
+	check_1 = malloc((a - 1) * sizeof(int));
 	current = *head;
 	for (b = 0; b < a / 2; b++)
 	{
