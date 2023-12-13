@@ -8,33 +8,43 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current;
-	int a = 0, *check_1, b;
+	listint_t *slow = *head, *fast = *head;
+	int *check;
+	int size = 0, i;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	current = *head;
-	while (current != NULL)
+	while (fast != NULL && fast->next != NULL)
 	{
-		a++;
-		current = current->next;
+		fast = fast->next->next;
+		size++;
+		slow = slow->next;
 	}
-	check_1 = malloc(((a / 3) - 1) * sizeof(int));
-	current = *head;
-	for (b = 0; b < a / 2; b++)
+
+	if (fast != NULL)
+		slow = slow->next;
+
+	check = malloc(size * sizeof(int));
+	if (check == NULL)
+		return (-1);
+
+	for (i = 0; i < size; i++)
 	{
-		check_1[b] = current->n;
-		current = current->next;
+		check[i] = slow->n;
+		slow = slow->next;
 	}
-	if (a % 2 != 0)
-		current = current->next;
-	b--;
-	while (current != NULL)
+
+	slow = *head;
+	for (i = size - 1; i >= 0; i--)
 	{
-		if (current->n != check_1[b])
+		if (slow->n != check[i])
+		{
+			free(check);
 			return (0);
-		current = current->next;
-		b--;
+		}
+		slow = slow->next;
 	}
+
+	free(check);
 	return (1);
 }
