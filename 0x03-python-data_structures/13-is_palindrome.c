@@ -24,7 +24,7 @@ int is_palindrome(listint_t **head)
 	if (fast != NULL)
 		slow = slow->next;
 
-	check = malloc(size * sizeof(int));
+	check = malloc((size / 2) * sizeof(int));
 	if (check == NULL)
 		return (-1);
 
