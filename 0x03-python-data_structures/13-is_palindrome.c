@@ -32,9 +32,13 @@ int is_palindrome(listint_t **head)
 	while (current != NULL)
 	{
 		if (current->n != check_1[b])
+		{
+			free(check_1);
 			return (0);
+		}
 		current = current->next;
 		b--;
 	}
+	free(check_1);
 	return (1);
 }
