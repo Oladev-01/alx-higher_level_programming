@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     if not my_list or my_list is None:
-        return None
+        return 0
     size = 0
     try:
         for i in range(x):
