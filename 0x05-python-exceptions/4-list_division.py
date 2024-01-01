@@ -3,8 +3,12 @@ def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     try:
         for i in range(list_length):
-            if i >= len(my_list_1) or i >= len(my_list_2):
-                raise IndexError("out of range")
+            if i >= len(my_list_1):
+                print("out of range")
+                new_list.append(0)
+            elif len(my_list_1) > 0 and i >= len(my_list_2):
+                print("out of range")
+                new_list.append(0)
             elif (not isinstance(my_list_1[i], (int, float))
                   or not isinstance(my_list_2[i], (int, float))):
                 new_list.append(0)
