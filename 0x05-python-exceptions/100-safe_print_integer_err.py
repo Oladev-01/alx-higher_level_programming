@@ -4,12 +4,8 @@ import sys
 
 def safe_print_integer_err(value):
     try:
-        if not isinstance(value, int):
-            raise ValueError
-        else:
-            print("{:d}".format(value))
+        sys.stdout.write("{:d}\n".format(int(value)))
+        return True
     except ValueError:
-        sys.stderr.write(("Exception: Unknown format code 'd' "
-                          "for object of type 'str'\n"))
+        sys.stderr.write("Exception: {}\n".format(sys.exc_info()[1]))
         return False
-    return True
