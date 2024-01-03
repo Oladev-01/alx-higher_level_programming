@@ -6,7 +6,7 @@ class Square:
     """ This class defines a class of square and returns the area of the object
     based on the size """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         self.size = size
 
     @property
