@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+""" This module defines a magicClass"""
+
 import math
 
 
 class MagicClass:
+    """ This class defines a magicclass"""
     def __init__(self, radius=0):
         self.__radius = 0
         self.radius = radius
