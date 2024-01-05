@@ -50,4 +50,4 @@ class Rectangle:
             for j in range(self.__width):
                 string += "#"
             string += "\n"
-        return string.rstrip("\n")
+        return string
