@@ -50,11 +50,11 @@ class Rectangle:
         if (self.__width == 0 or
                 self.__height == 0):
             return ""
-        sym = str(Rectangle.print_symbol)
+        sym = str(self.print_symbol)
         string = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                string += sym
+                string += str(sym)
             string += "\n"
         return string.rstrip("\n")
 
