@@ -10,3 +10,7 @@ class Square:
             raise TypeError("size must be an integer")
         if self.__size < 0:
             raise ValueError("size must be >= 0")
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile('2-main.py')
