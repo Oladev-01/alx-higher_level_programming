@@ -3,29 +3,70 @@ This is how to write a docstring for future reference
 firstly, let's import the module
 >>> add_integer = __import__('0-add_integer').add_integer
 
->>> print(add_integer(10, 2))
-12
+::
+  1   we want to do a normal check for addition
+::
 
->>> print(add_integer(10.5, 2.5))
-12
+>>> add_integer(2, 3)
+5
 
->>> print(add_integer(-2, -2))
--4
+::
+  2  Let's check for float values
+::
 
->>> print(add_integer(0))
-98
+>>> add_integer(2.9, 3.5)
+5
 
->>> print(add_integer(-0))
-98
+::
+ 3  Let's check for negative values of normal integer with float
+::
 
->>> print(add_integer(2, -2))
-0
+>>> add_integer(-2, 7.9)
+5
 
->>> add_integer(-2, -2)
--4
+::
+ 4   Let's check for two negative floats
+::
 
->>> unpredictable(add_integer(-2, "2"))  # doctest: +ELLIPSIS
-ValueError("b must be an integer")
+>>> add_integer(-2.5, -3.0)
+-5
+
+::
+ 5   parsing just only one argument, negative integer
+::
+>> add_integer(-1)
+97
+
+::
+ 6   Let's parse a single float argument
+::
+
+>>> add_integer(5.9)
+103
+
+::
+ 7   let's check for the type by parsing a wrong type
+::
+
+>>> add_integer("hello", 10.6)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+::
+ 8  Let's check for integer overflow
+::
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+::
+ 9  Last test for now is the NaN to integer
+::
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
 
 End of testcase docstring
 """
