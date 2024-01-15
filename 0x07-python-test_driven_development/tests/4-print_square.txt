@@ -1,0 +1,36 @@
+''' let's write a test. we import first '''
+>>> square = __import__('4-print_square').print_square
+
+''' lets make some test for normal integer'''
+>>> square(4)
+####
+####
+####
+####
+
+''' test for non-integer or float '''
+>>> square("4")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+''' Let's test for zero size '''
+>>> square(0)
+
+''' Let's test for float '''
+>>> square(0.1)
+
+''' Let's check for value less than 0 '''
+>>> square(-1.8)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+''' Let's test for normal float '''
+>>> square(1.8)
+#
+
+''' Let's for None '''
+>>> square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+''' i think we have come to the end of the test '''
