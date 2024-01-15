@@ -18,15 +18,18 @@ TypeError: size must be an integer
 
 ''' Let's test for float '''
 >>> square(0.1)
+Traceback (most recent call last):
+TypeError: size must be an integer
 
 ''' Let's check for value less than 0 '''
 >>> square(-1.8)
 Traceback (most recent call last):
-ValueError: size must be >= 0
+TypeError: size must be an integer
 
 ''' Let's test for normal float '''
 >>> square(1.8)
-#
+Traceback (most recent call last):
+TypeError: size must be an integer
 
 ''' Let's for None '''
 >>> square(None)
