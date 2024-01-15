@@ -36,4 +36,9 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 TypeError: size must be an integer
 
+''' let's test for when no argument is parsed '''
+>>> square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
 ''' i think we have come to the end of the test '''
