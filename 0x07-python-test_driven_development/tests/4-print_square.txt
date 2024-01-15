@@ -26,6 +26,11 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 TypeError: size must be an integer
 
+''' let's test for negative integer '''
+>>> square(-23)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
 ''' Let's test for normal float '''
 >>> square(1.8)
 Traceback (most recent call last):
