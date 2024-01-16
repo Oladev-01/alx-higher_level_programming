@@ -9,8 +9,7 @@ i am a boy that goes to church everyday.
 look at me shining.
 <BLANKLINE>
 or am i not ?
-
-
+<BLANKLINE>
 
 ''' Test for a non-string'''
 >>> text_print(20)
@@ -19,7 +18,6 @@ TypeError: text must be a string
 
 ''' for empty string'''
 >>> text_print("")
-<BLANKLINE>
 
 ''' test for a string with just the instances'''
 >>> text_print(". : ?")
@@ -28,10 +26,12 @@ TypeError: text must be a string
 :
 <BLANKLINE>
 ?
+<BLANKLINE>
 
 ''' test with only one of the instances'''
 >>> text_print(":")
 :
+<BLANKLINE>
 
 ''' test with the instances without space'''
 >>> text_print(":::")
@@ -40,3 +40,4 @@ TypeError: text must be a string
 :
 <BLANKLINE>
 :
+<BLANKLINE>
