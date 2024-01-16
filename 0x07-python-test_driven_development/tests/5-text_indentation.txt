@@ -1,0 +1,42 @@
+'''import module'''
+>>> text_print =  __import__('5-text_indentation').text_indentation
+
+'''valid string containing one of the three instances for printing two newlines'''
+>>> string = "i am a boy that goes to church everyday. look at me shining. or am i not ?"
+>>> text_print(string)
+i am a boy that goes to church everyday.
+<BLANKLINE>
+look at me shining.
+<BLANKLINE>
+or am i not ?
+
+
+
+''' Test for a non-string'''
+>>> text_print(20)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+''' for empty string'''
+>>> text_print("")
+<BLANKLINE>
+
+''' test for a string with just the instances'''
+>>> text_print(". : ?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+
+''' test with only one of the instances'''
+>>> text_print(":")
+:
+
+''' test with the instances without space'''
+>>> text_print(":::")
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
