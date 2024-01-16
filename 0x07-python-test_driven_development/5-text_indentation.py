@@ -23,4 +23,4 @@ def text_indentation(text):
         else:
             newline = False
 
-    print(mod_string.rstrip())
+    print(mod_string.rstrip("\n"))
