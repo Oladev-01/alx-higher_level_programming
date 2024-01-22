@@ -53,7 +53,7 @@ TypeError: m_b must be a list
 Traceback (most recent call last):
 TypeError: m_a should contain only integers or floats
 
->>> matrix_mul([[1, 2, [1, 5]]], [["string", {"dict": 2}]])
+>>> matrix_mul([[1, 2], [1, 5]], [["string", {"dict": 2}]])
 Traceback (most recent call last):
 TypeError: m_b should contain only integers or floats
 
