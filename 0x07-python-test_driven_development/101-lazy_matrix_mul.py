@@ -46,6 +46,5 @@ def lazy_matrix_mul(m_a, m_b):
     np_b = np.array(m_b)
 
     result = np.dot(np_a, np_b)
-    result_list = result.tolist()
 
-    return result_list
+    return result
