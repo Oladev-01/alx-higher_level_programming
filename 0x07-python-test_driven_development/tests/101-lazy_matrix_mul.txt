@@ -1,0 +1,71 @@
+'''import the module'''
+>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+'''test for matrix, lists of lists with valid integers'''
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+>>> matrix_mul([[1,2], [1, 3]], [[1, 2, 3],[2, 4, 5]])
+[[5, 10, 13], [7, 14, 18]]
+
+'''valid matrix with floats and integers'''
+>>> matrix_mul([[2.5, 7.8, 6], [3, 2.4, 2.1]], [[2, 3, 4], [2.7, 8, 5.5], [1, 2, 3]])
+[[32.06, 81.9, 70.9], [14.58, 32.4, 31.5]]
+
+'''empty argument'''
+>>> matrix_mul([[]], [[]])
+Traceback (most recent call last):
+ValueError: m_a must not be empty
+
+>>> matrix_mul([[1, 2, 3]], [])
+Traceback (most recent call last):
+ValueError: m_b must not be empty
+
+'''no argument'''
+>>> matrix_mul()
+Traceback (most recent call last):
+TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+'''column of m_a not equal to row of m_b'''
+>>> matrix_mul([[1, 2]], [[1, 3]])
+Traceback (most recent call last):
+ValueError: m_a and m_b can't be multiplied
+>>> matrix_mul([[1, 2, 3], [3, 4, 5]], [[1, 2, 3], [2, 4, 5]])
+Traceback (most recent call last):
+ValueError: m_a and m_b can't be multiplied
+
+'''non-matching column of the same matrix'''
+>>> matrix_mul([[1, 2], [1]], [[1, 2, 3], [4, 5, 6]])
+Traceback (most recent call last):
+TypeError: each row of m_a must be of the same size
+
+>>> matrix_mul([[1, 2, 3], [2, 3, 4]], [[1, 2], [1, 2, 3]])
+Traceback (most recent call last):
+TypeError: each row of m_b must be of the same size
+
+'''invalid argument'''
+>>> matrix_mul({1, 2, 4}, [[1, 2, 3]])
+Traceback (most recent call last):
+TypeError: m_a must be a list
+>>> matrix_mul([[1, 2, 3]], {1, 2, 4})
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+'''list containing invalid type'''
+>>> matrix_mul([[1, 2, {1, 5}]], [["string", {"dict": 2}]])
+Traceback (most recent call last):
+TypeError: m_a should only contain only integers or floats
+
+>>> matrix_mul([[1, 2], [1, 5]], [["string", {"dict": 2}]])
+Traceback (most recent call last):
+TypeError: m_b should only contain only integers or floats
+
+'''list of non-lists'''
+>>> matrix_mul(["non-list"], [[1, 2, 3]])
+Traceback (most recent call last):
+TypeError: m_a must be a list of lists
+
+>>> matrix_mul([[1, 2, 3]], ["non-list"])
+Traceback (most recent call last):
+TypeError: m_b must be a list of lists
