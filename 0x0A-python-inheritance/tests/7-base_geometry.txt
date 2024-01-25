@@ -6,6 +6,10 @@
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [Exception] area() is not implemented
 >>> try:
+...     base1.integer_validator("age", True)
+... except Exception as e:
+...     print("{} {}".format(e.__class__.__name__, e))
+>>> try:
 ...  base1.integer_validator("olalekan", "olalekan")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
@@ -56,8 +60,4 @@ TypeError olalekan must be an integer
 ...     print("{} {}".format(e.__class__.__name__, e))
 TypeError olalekan must be an integer
 
->>> try:
-...     base1.integer_validator("age", True)
-... except Exception as e:
-...     print("{} {}".format(e.__class__.__name__, e))
 
