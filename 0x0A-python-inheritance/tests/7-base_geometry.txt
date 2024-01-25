@@ -29,12 +29,12 @@ ValueError olalekan must be greater than 0
 ...     base1.integer_validator("olalekan")
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
-TypeError BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError integer_validator() missing 1 required positional argument: 'value'
 >>> try:
 ...     base1.integer_validator()
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
-TypeError BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError nteger_validator() missing 2 required positional arguments: 'name' and 'value'
 >>> try:
 ...     base1.integer_validator("olalekan", (bool,))
 ... except Exception as e:
