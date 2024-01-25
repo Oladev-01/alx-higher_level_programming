@@ -1,0 +1,42 @@
+'''impotr the module'''
+>>> MyList = __import__('1-my_list').MyList
+
+'''creating an instance'''
+'''appending items to the class and printing d list and the sorted list'''
+>>> my_list = MyList()
+>>> my_list.append(12)
+>>> my_list.append(13)
+>>> my_list.append(18)
+>>> my_list.append(15)
+>>> print(my_list)
+[12, 13, 18, 15]
+>>> my_list.print_sorted()
+[12, 13, 15, 18]
+
+'''test with no items in list'''
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> my_list = MyList()
+>>> my_list.append(-12)
+>>> my_list.append(-34)
+>>> my_list.append(12)
+>>> my_list.append(-23)
+>>> my_list.append(-10)
+>>> print(my_list)
+[-12, -34, 12, -23, -10]
+>>> my_list.print_sorted()
+[-34, -23, -12, -10, 12]
+
+'''test with same number'''
+>>> my_list = MyList()
+>>> my_list.append(10)
+>>> my_list.append(13)
+>>> my_list.append(10)
+>>> my_list.append(13)
+>>> print(my_list)
+[10, 13, 10, 13]
+>>> my_list.print_sorted()
+[10, 10, 13, 13]
