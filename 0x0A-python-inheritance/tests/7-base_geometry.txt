@@ -46,7 +46,7 @@ TypeError olalekan must be an integer
 ...     print("{} {}".format(e.__class__.__name__, e))
 TypeError olalekan must be an integer
 >>> try:
-...     base1.integer_validator("olalekan", {})
+...     base1.integer_validator("olalekan", {3, 4})
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
 TypeError olalekan must be an integer
