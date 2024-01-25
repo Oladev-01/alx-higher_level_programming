@@ -34,7 +34,7 @@ TypeError integer_validator() missing 1 required positional argument: 'value'
 ...     base1.integer_validator()
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
-TypeError nteger_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError integer_validator() missing 2 required positional arguments: 'name' and 'value'
 >>> try:
 ...     base1.integer_validator("olalekan", (bool,))
 ... except Exception as e:
