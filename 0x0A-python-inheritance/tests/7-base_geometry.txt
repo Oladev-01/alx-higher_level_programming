@@ -9,17 +9,17 @@
 ...  base1.integer_validator("olalekan", "olalekan")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] <name> must be an integer
+[TypeError] olalekan must be an integer
 >>> try:
 ...     base1.integer_validator("olalekan", -1)
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
-ValueError <name> must be greater than 0
+ValueError olalekan must be greater than 0
 >>> try:
 ...     base1.integer_validator("olalekan", 0)
 ... except Exception as e:
 ...     print("{} {}".format(e.__class__.__name__, e))
-ValueError <name> must be greater than 0
+ValueError olalekan must be greater than 0
 >>> try:
 ...     base1.integer_validator("olalekan", 7)
 ... except Exception as e:
