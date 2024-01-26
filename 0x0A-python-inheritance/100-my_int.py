@@ -5,6 +5,7 @@
 
 class MyInt(int):
     """this is an int sub class"""
+
     def __eq__(self, value):
         return not super().__eq__(value)
 
