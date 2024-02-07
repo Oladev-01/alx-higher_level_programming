@@ -65,6 +65,10 @@ class Rectangle(Base):
 
     def display(self):
         """this method prints the area of the rectangle as #"""
+        for check_newline in range(self.__y):
+            for newline in range(self.__x):
+                print(end='')
+            print()
         for row in range(self.__height):
             for column in range(self.__width):
                 print("#", end='')
