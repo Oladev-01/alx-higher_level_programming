@@ -18,6 +18,16 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        keys = ['id', 'size', 'x', 'y']
+        if args:
+            for key, value in enumerate(args):
+                setattr(self, keys[key], value)
+        if kwargs:
+            for key, value in kwargs.items():
+                if key in keys:
+                    setattr(self, key, value)
+
     def __str__(self):
         string = (f"[Square] ({self.id}) {self.x}/{self.y}"
                   f" - {self.width}")
