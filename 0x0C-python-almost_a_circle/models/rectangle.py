@@ -82,6 +82,11 @@ class Rectangle(Base):
                 if key in keys:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """this returns the dictionary representation of the class"""
+        return {'id': self.id, 'width': self.__width,
+                'height': self.__height, 'x': self.__x, 'y': self.__y}
+
     def __str__(self):
         string = (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
                   f" - {self.__width}/{self.__height}")
