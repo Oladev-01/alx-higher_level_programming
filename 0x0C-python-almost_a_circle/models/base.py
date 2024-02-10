@@ -43,3 +43,14 @@ class Base:
         args = cls.to_json_string(list_objs)
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(args)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """this method creates a new instance of the class with
+        attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy_inst = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy_inst = cls(1)
+        dummy_inst.update(**dictionary)
+        return dummy_inst
