@@ -1,3 +1,4 @@
--- this script lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server.
-SELECT *
-FROM hbtn_0c_0.first_table;
+-- list_rows.sql
+
+-- Select all fields from the first_table
+SELECT * FROM hbtn_0c_0.first_table;
