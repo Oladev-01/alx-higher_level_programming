@@ -1,3 +1,8 @@
--- this script creates a new user with all privileges
-CREATE USER IF NOT EXISTS user_0d_1 IDENTIFIED BY 'user_0d_1_pwd';
-GRANT PRIVILEGES ON *.* to 'user_0d_1_pwd'@'localhost';
+-- Create the user if it doesn't exist
+CREATE USER IF NOT EXISTS 'user_0d_1'@'%' IDENTIFIED BY 'user_0d_1_pwd';
+
+-- Grant all privileges to the user
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'%';
+
+-- Flush privileges to apply the changes
+FLUSH PRIVILEGES;
