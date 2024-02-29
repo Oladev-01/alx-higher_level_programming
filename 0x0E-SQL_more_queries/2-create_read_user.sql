@@ -1,8 +1,11 @@
--- this script creates a new database and a new user
--- creating the database
+-- Create the database if it doesn't exist
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
--- creating the user
+
+-- Create the user if it doesn't exist
 CREATE USER IF NOT EXISTS 'user_0d_2'@'%' IDENTIFIED BY 'user_0d_2_pwd';
--- granting select privilege to the new user
+
+-- Grant SELECT privilege on hbtn_0d_2 database to the user
 GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'%';
+
+-- Flush privileges to apply the changes
 FLUSH PRIVILEGES;
