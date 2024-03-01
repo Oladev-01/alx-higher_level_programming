@@ -4,6 +4,5 @@
 
 SELECT id, name
 FROM cities
-WHERE states.name='California'
-AND states.id = cities.state_id
+WHERE states_id = (SELECT id FROM states WHERE name='California')
 ORDER BY id;
