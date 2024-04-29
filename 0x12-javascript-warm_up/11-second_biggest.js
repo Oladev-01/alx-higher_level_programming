@@ -5,6 +5,7 @@ of integers parsed as arguments to the file */
 const args = process.argv;
 if (args.length <= 3) {
   console.log(0);
+  return;
 }
 
 let secLargest = parseInt(args[3]);
