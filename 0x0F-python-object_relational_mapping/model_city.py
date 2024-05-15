@@ -15,5 +15,6 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
 
-    engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.format('root', '1002', 'localhost', 'hbtn_0e_14_usa'))
+    engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.format
+                           ('root', '1002', 'localhost', 'hbtn_0e_14_usa'))
     Base.metadata.create_all(engine)
