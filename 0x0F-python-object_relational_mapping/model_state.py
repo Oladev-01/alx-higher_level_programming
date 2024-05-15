@@ -16,3 +16,7 @@ class State(Base):
 
     id = Column(Integer, nullable=False, autoincrement=True, primary_key=True)
     name = Column(String(128), nullable=False)
+
+    def __repr__(self):
+        """this formats the output of the table"""
+        return f"{self.id}: {self.name}"
