@@ -17,17 +17,14 @@ def list_states(username, password, database, query_type):
     session = Session()
 
     states = session.query(State).filter(State.name.like
-                                         ('%{}%'.format(query_type))).all()
+                                         ('%{}%'.format(query_type)
+                                          )).order_by(State.id).first()
 
     if not states:
         print("Not found")
         return
-    try:
-        for state in states:
-            print(state.id)
-    except Exception as e:
-        print("this is what went wrong: {}".format(e))
 
+    print(states.id)
     session.close()
 
 
