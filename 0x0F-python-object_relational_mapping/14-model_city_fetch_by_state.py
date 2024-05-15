@@ -11,7 +11,7 @@ from sqlalchemy import create_engine
 
 
 def list_states(username, password, database):
-    """this module queries the database"""
+    """this module queries the database."""
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(username, password, database),
