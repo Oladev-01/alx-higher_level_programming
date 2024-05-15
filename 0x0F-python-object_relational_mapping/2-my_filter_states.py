@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """this module defines a function isues a query to the
- database via user input"""
+database via user input"""
 
 import sys
 import MySQLdb
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
     query_type = sys.argv[4]
-list_states(username, password, database, query_type)
+    list_states(username, password, database, query_type)
