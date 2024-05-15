@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-
+"""
+this module defines a class repr of a table
+in the database 
+"""
 
 from sqlalchemy import Column, String, Integer, ForeignKey, create_engine
 from model_state import Base
