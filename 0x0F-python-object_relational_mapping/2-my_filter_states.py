@@ -16,7 +16,7 @@ def list_states(username, password, database, query_type):
         db=database
     )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name='{}'".format(query_type)
+    query = "SELECT * FROM states WHERE BINARY name LIKE '{}'".format(query_type)
     cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
