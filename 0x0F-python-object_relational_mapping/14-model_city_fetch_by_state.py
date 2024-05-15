@@ -20,13 +20,15 @@ def list_states(username, password, database):
     session = Session()
 
     states = session.query(City, State).join(State).order_by(City.id).all()
-
+    # loop running through the retrieved rows
     for city, state in states:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
+
     session.close()
 
 
 if __name__ == "__main__":
+    # main function
     if len(sys.argv) != 4:
         sys.exit(1)
 
