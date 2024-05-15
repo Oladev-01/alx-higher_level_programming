@@ -19,9 +19,6 @@ def list_states(username, password, database):
     states = session.query(State).filter(State.name.like('%a%')).\
         order_by(State.id).all()
 
-    if not states:
-        print("Nothing")
-        return
     for state in states:
         print(state)
 
