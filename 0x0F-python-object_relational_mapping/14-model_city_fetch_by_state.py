@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module defines a class that will be
 connected to a database via orm"""
+
 from model_city import Base, City
 from model_state import State
 import sys

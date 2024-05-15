@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module defines a class that will be
 connected to a database via orm"""
+
 from sqlalchemy import Column, String, Integer, ForeignKey, create_engine
 from model_state import Base
 
