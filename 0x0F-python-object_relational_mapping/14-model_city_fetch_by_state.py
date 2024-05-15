@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""this module queries the database 
+
+""" this module queries the database 
 """
 
 from model_city import Base, City
