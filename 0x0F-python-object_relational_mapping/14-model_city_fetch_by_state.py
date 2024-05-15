@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-""" this module queries the database
-"""
-
 from model_city import Base, City
 from model_state import State
 import sys
