@@ -20,6 +20,7 @@ def list_states(username, password, database):
 
     if not states:
         print("Nothing")
+        return
 
     print(states)
 
