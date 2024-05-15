@@ -6,8 +6,8 @@ import sys
 
 
 def list_states(username, password, database):
-    """this function accepts three args and use them in connecting to mysql database
-    and issue a query to the database"""
+    """this function accepts three args and use them in connecting to
+    mysql database and issue a query to the database"""
 
     db = MySQLdb.connect(
         host="localhost",
@@ -26,6 +26,7 @@ def list_states(username, password, database):
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
