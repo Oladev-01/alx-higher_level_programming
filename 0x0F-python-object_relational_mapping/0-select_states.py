@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """this script issues a query to the mysql database via the mysqldb driver"""
 
 import MySQLdb
