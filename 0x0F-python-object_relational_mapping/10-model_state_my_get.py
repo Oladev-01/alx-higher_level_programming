@@ -18,7 +18,7 @@ def list_states(username, password, database, query_type):
 
     states = session.query(State).filter(State.name.like
                                          ('%{}%'.format(query_type)
-                                          )).order_by(State.id).first()
+                                          )).order_by(State.id.desc()).first()
 
     if not states:
         print("Not found")
