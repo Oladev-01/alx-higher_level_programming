@@ -46,3 +46,6 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 8**: [Esrever]
 - Solution: ```File 8-esrever.js```
+
+- **Task 9**: [Log me]
+- Solution: ```File 9-logme.js```
