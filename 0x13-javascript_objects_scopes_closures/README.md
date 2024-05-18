@@ -49,3 +49,6 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 9**: [Log me]
 - Solution: ```File 9-logme.js```
+
+- **Task 10**: [Number conversion]
+- Solution: ```File 10-converter.js```
