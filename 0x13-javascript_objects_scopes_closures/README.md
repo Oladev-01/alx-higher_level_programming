@@ -52,3 +52,9 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 10**: [Number conversion]
 - Solution: ```File 10-converter.js```
+
+- **Task 11**: [Factor index]
+- Solution: ```File 100-map.js```
+
+- **Task 12**: [Sorted occurences]
+- Solution: ```File 101-sorted.js```
