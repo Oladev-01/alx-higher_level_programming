@@ -58,3 +58,6 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 12**: [Sorted occurences]
 - Solution: ```File 101-sorted.js```
+
+- **Task 13**: [Concat files]
+- Solution: ```File 102-concat.js```
