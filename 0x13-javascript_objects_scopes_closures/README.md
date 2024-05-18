@@ -37,3 +37,6 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 5**: [ Square #0]
 - Solution: ```File 5-square.js```
+
+- **Task 6**: [Square #1]
+- Solution: ```File 6-square.js```

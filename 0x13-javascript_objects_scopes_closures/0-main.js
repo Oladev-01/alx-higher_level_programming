@@ -1,14 +1,8 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+const Square = require('./5-square');
 
-const r1 = new Rectangle(2, 3);
-console.log("Normal")
-r1.print()
+const s1 = new Square(4);
+s1.print();
+s1.double();
+s1.print();
 
-r1.double()
-console.log("Doubled")
-r1.print()
-
-r1.rotate()
-console.log("Rotated")
-r1.print()
