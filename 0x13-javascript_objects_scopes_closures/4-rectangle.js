@@ -6,27 +6,30 @@ this script defines a class Rectangle with methods:
 ```Rotate```: this exchanges the parameters of the rectangle */
 
 class Rectangle {
-    constructor(w, h) {
-        this.width = w;
-        this.height = h;
+  constructor (w, h) {
+    this.width = w;
+    this.height = h;
+  }
+
+  rotate () {
+    const temp = this.height;
+    this.height = this.width;
+    this.width = temp;
+  }
+
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
+
+  print () {
+    for (let height = 0; height < this.height; height++) {
+      for (let width = 0; width < this.width; width++) {
+        process.stdout.write('X');
+      }
+      console.log();
     }
-    rotate() {
-        let temp = this.height;
-        this.height = this.width;
-        this.width = temp;
-    }
-    double() {
-        this.width *= 2;
-        this.height *= 2;
-    }
-    print() {
-        for (let height = 0; height < this.height; height++) {
-            for (let width = 0; width < this.width; width++) {
-                process.stdout.write('X');
-            }
-            console.log();
-        }
-    }
+  }
 }
 
 module.exports = Rectangle;
