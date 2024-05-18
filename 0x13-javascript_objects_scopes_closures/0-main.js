@@ -1,8 +1,14 @@
 #!/usr/bin/node
-const Rectangle = require('./3-rectangle');
+const Rectangle = require('./4-rectangle');
 
 const r1 = new Rectangle(2, 3);
-r1.print();
+console.log("Normal")
+r1.print()
 
-const r2 = new Rectangle(10, 5);
-r2.print();
+r1.double()
+console.log("Doubled")
+r1.print()
+
+r1.rotate()
+console.log("Rotated")
+r1.print()
