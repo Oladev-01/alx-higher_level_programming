@@ -12,14 +12,14 @@ class Square extends SquareParent {
 
   charPrint (c) {
     if (c === undefined) {
-        this.print();
+      this.print();
     } else {
-        for (let height = 0; height < this.height; height++) {
-            for (let width = 0; width < this.width; width++) {
-                process.stdout.write(c);
-            }
-            console.log();
+      for (let height = 0; height < this.height; height++) {
+        for (let width = 0; width < this.width; width++) {
+          process.stdout.write(c);
         }
+        console.log();
+      }
     }
   }
 }
