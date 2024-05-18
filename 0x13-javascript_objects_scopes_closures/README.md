@@ -31,3 +31,7 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 3**: [Rectangle #3]
 - Solution: ```File 3-rectangle.js ```
+
+- **Task 4**: [Rectangle #4]
+- Solution: ```File 4-rectangle.js```
+
