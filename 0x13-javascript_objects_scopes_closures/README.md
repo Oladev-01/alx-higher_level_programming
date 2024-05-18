@@ -40,3 +40,7 @@ This project is about javascript scopes, closures, objects and classes. Feel fre
 
 - **Task 6**: [Square #1]
 - Solution: ```File 6-square.js```
+
+- **Task 7**: [Occurrences]
+- Solution: ```File 7-occurrences.js```
+

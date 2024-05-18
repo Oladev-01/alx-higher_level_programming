@@ -1,8 +1,9 @@
 #!/usr/bin/node
-const Square = require('./6-square');
+const square = require('./6-square');
 
-const s1 = new Square(4);
+const s1 = new square(4);
+s1.double()
 s1.charPrint('C')
-s1.print();
+
 
 
