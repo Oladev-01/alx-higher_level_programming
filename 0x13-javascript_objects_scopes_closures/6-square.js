@@ -3,9 +3,9 @@
 and defines a funtion charPrint(c) which prints the square rep
 with 'C' or 'X' if c is undefined */
 
-const Rectangle = require('./4-rectangle.js');
+const SquareParent = require('./5-square.js');
 
-class Square extends Rectangle {
+class Square extends SquareParent {
   constructor (size) {
     super(size, size);
   }
