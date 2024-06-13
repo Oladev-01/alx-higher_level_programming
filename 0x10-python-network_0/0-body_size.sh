@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # this script runs curl on a given url and returns the size of the response body
 
 if [ "$#" -ne 1 ]; then
