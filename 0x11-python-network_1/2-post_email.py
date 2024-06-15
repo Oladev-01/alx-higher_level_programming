@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""making a post request"""
+
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 import sys
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:
