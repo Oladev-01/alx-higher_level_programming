@@ -12,7 +12,7 @@ if (!epId) {
   process.exit();
 }
 
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${ep_id}`;
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${epId}`;
 
 request(apiUrl, (err, response, body) => {
   const data = JSON.parse(body);
