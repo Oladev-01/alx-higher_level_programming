@@ -5,14 +5,14 @@
  */
 
 const request = require('request');
-ep_id = process.argv[2];
+const epId = process.argv[2];
 
-if (!ep_id) {
+if (!epId) {
   console.error('Usage: ./3-starwars_title.js <id>');
-  process.exit;
+  process.exit();
 }
 
-apiUrl = `https://swapi-api.alx-tools.com/api/films/${ep_id}`;
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${ep_id}`;
 
 request(apiUrl, (err, response, body) => {
   const data = JSON.parse(body);
@@ -20,7 +20,7 @@ request(apiUrl, (err, response, body) => {
     console.error('Error:', err);
     return;
   }
-  if (response.statusCode == 200) {
+  if (response.statusCode === 200) {
     console.log(data.title);
   } else {
     console.error('Error:', data.detail || 'there was an error in getting resource');
