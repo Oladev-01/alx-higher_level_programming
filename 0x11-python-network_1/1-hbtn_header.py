@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         url = sys.argv[1]
-        req = Request(url)
-        with urlopen(req) as response:
-            x_request = response.headers.get('X-Request-Id')
+        #req = Request(url)
+        with urlopen(url) as response:
+            x_request = response.headers.get('X-Served-By')
             print(x_request)
